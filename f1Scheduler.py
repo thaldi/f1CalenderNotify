@@ -23,15 +23,16 @@ def CheckRaceDateIsToday(raceDate):
     return True if mergedDate == raceDate else False
 
 
-for element in allElements:
-    href = element.get("href")
-    if href != "" or href is not None:
-        result = parser.GetPelementFromHref("{}{}".format(baseUrl, href))
-        if result is not None:
-            value = result.get("value")
-            if value != "" or value != None:
-                lastDate = ClearRaceDateValue(result.text)
-                result = CheckRaceDateIsToday(lastDate)
-                if result == True:
-                    toast.ShowToastMessage(lastDate)
+def Check():
+    for element in allElements:
+        href = element.get("href")
+        if href != "" or href is not None:
+            result = parser.GetPelementFromHref("{}{}".format(baseUrl, href))
+            if result is not None:
+                value = result.get("value")
+                if value != "" or value != None:
+                    lastDate = ClearRaceDateValue(result.text)
+                    result = CheckRaceDateIsToday(lastDate)
+                    if result == True:
+                        toast.ShowToastMessage(lastDate)
 

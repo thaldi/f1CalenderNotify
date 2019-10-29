@@ -1,4 +1,4 @@
 {
     "python.formatting.provider": "black",
-    "python.pythonPath": "c:\\Users\\tigri\\Desktop\\python sample\\.venv\\Scripts\\python.exe"
+    "python.pythonPath": ".venv\\Scripts\\python.exe"
 }
